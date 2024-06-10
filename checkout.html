@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="back-arrow" id="backArrow"> x </div>
+
+    <div class="container">
+        <h1>Finalizar Compra</h1>
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="zipcode">CEP:</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+            </div>
+            <div class="form-group">
+                <label for="payment">Meio de Pagamento:</label>
+                <select id="payment" name="payment" required>
+                    <option value="creditCard">Cartão de Crédito</option>
+                    <option value="debitCard">Cartão de Débito</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="shipping">Método de Envio:</label>
+                <select id="shipping" name="shipping" required>
+                    <option value="standard">Padrão</option>
+                    <option value="express">Expresso</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Informações Adicionais:</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+            <button type="button" id="calculateShipping" class="calcular_finalizar">Calcular Frete</button>
+            <p id="shippingCost"></p>
+            <button type="button" id="finalizePurchase">Finalizar Compra</button>
+        </form>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 class="compra_finalizada">Compra Finalizada!</h1>
+            <p class="compra_finalizada">Obrigado por sua compra. Seus produtos serão enviados em breve.</p>
+            <button id="closeModal" class="compra_finalizada">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

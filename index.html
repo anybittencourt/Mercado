@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <img src="./images/Logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a id="openModalBtn">Cadastro</a></li>
+                <li><a id="openCartBtn">Carrinho</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Busca">
+            </form>
+        </div>
+    </header>
+
+    <div id="cart-overlay" class="hidden"></div>
+    <div id="cart-modal" class="hidden">
+        <span id="closeCartBtn">&times;</span>
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <button id="finalizarCompraBtn">Finalizar Compra</button>
+    </div>
+
+    <script>
+        document.getElementById('finalizarCompraBtn').addEventListener('click', function() {
+            window.location.href ='checkout.html';
+        });
+    </script>
+
+    <div id="overlay" class="hidden"></div>
+
+    <div id="registration-form-container" class="hidden">
+        <span id="closeBtn">&times;</span>
+        <form id="registration-form">
+            <label for="username">Nome de usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="text" id="username" name="username" required>
+            <label >Senha:</label>
+            <input required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <main>
+        <section class="products">
+            <h2>MAIS VENDIDOS</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="./images/lua_cheia.jpg" alt="Produto 1">
+                    <h3>LUA CHEIA</h3>
+                    <i>Seu disco lunar totalmente iluminado e é visível à noite</i>
+                    <p>R$500.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/lua_de_sangue.jpg" alt="Produto 2">
+                    <h3>LUA DE SANGUE</h3>
+                    <i>Eclipse lunar e Super Lua simultaneamente</i>
+                    <p>R$1.000.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/lua-minguante.png" alt="Produto 3">
+                    <h3>LUA MINGUANTE</h3>
+                    <i>Metade da lua iluminada</i>
+                    <p>R$250.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/lua_nova.png" alt="Produto 4">
+                    <h3>LUA NOVA</h3>
+                    <i>Lua se encontra entre a Terra e o Sol</i>
+                    <p>R$180.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <h2>ESTRELAS</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="./images/estrela de belém.jpg" alt="Produto 5">
+                    <h3>ESTRELA DE BELÉM</h3>
+                    <i>Guiou os três reis magos ao lugar do nascimento de Jesus Cristo</i>
+                    <p>R$600.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/estrela_sirius2.jpg" alt="Produto 6">
+                    <h3>ESTRELA SIRIUS</h3>
+                    <i>Estrela mais brilhante do céu noturno, visível a olho nú</i>
+                    <p>R$550.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/tres marias.png" alt="Produto 7">
+                    <h3>TRÊS MARIAS</h3>
+                    <i>Um asterismo de três estrelas que formam o cinturão da constelação de Orion</i>
+                    <p>R$120.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/estrela de saturno.jpg" alt="Produto 8">
+                    <h3>ESTRELA DE SATURNO</h3>
+                    <i>Seu brilho equivale ao de uma estrela de primeira magnitude, de cor amarelo-alaranjada.</i>
+                    <p>R$100.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>GALÁXIAS</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="./images/galáxia elíptica.jpg" alt="Produto 9">
+                    <h3>GALÁXIA ELÍPTICA</h3>
+                    <i>Uma imagem suave e quase sem traços característicos</i>
+                    <p>R$800.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/galáxia espiral.jpg" alt="Produto 10">
+                    <h3>GALÁXIA ESPIRAL</h3>
+                    <i>Enormes coleções de bilhões de estrelas, achatadas em uma forma de disco</i>
+                    <p>R$880.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/galáxia triangulo.jpg" alt="Produto 11">
+                    <h3>GALÁXIA TRIÂNGULO</h3>
+                    <i>Localizada a três milhões de anos-luz na direção da constelação do Triângulo</i>
+                    <p>R$790.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="./images/galáxia via lactea.jpg" alt="Produto 12">
+                    <h3>GALÁXIA VIA LÁCTEA</h3>
+                    <i>A galáxia onde está localizada o Sistema Solar</i>
+                    <p>R$1.500.000</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Bem-vindo à nossa Loja</h3>
+        <p>Encontre os melhores produtos aqui!</p>
+        <p>by: Any Rosa Severo Bittencourt, Maria Eduarda Brito de Mello e Pietra Oliveira de Freitas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
